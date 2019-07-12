@@ -1,5 +1,7 @@
 body {
     background-image: url("./background3.jpg");
+    width: 100%;
+    height: auto;
    }
 .typewriter {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
