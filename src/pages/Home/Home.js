@@ -37,20 +37,21 @@ class Home extends Component {
     }
     render(){
         return (
-            <div style={{textAlign:"center", marginTop:"150px"}}>
-                <h1 className="typewriter">Welcome to the world of Robots!</h1>
-                <br/>
-                <h2>let's have some fun with funny robots</h2>
-                <br/>
-                <SearchBox
-                handleInputChange={this.handleInputChange}
-                handleFormSubmit={this.handleFormSubmit}
-                />
-                <SearchResult
-                results={this.state.results}
-                />
-            </div>
-            
+            <container className="container-fluid">
+                <div style={{textAlign:"center", marginTop:"150px"}}>
+                    <h1 className="typewriter">Welcome to the world of Robots!</h1>
+                    <br/>
+                    <h2>let's have some fun with funny robots</h2>
+                    <br/>
+                    <SearchBox
+                    handleInputChange={this.handleInputChange}
+                    handleFormSubmit={this.handleFormSubmit}
+                    />
+                    <SearchResult
+                    results={this.state.results}
+                    />
+                </div>
+            </container>
         )
     }
 }
