@@ -7,7 +7,7 @@ const SearchBox = props =>(
             <input 
             type="text"
             name="weather"
-            placeholder="enter the city ..."
+            placeholder="enter a funny word ..."
             value= {props.value}
             onChange={props.handleInputChange}
             />
@@ -15,7 +15,7 @@ const SearchBox = props =>(
             className="btn" 
             type="submit" 
             onClick={props.handleFormSubmit}>
-            Get Weather
+            Get Robot
             </button>
         </div>
         
