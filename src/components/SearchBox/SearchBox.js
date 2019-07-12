@@ -2,11 +2,12 @@ import React from "react";
 import "./SearchBox.css";
 
 const SearchBox = props =>(
-    <form className="search">
+    <form className="search w3-animate-top">
         <div className="form-group">
             <input 
+            style={{height:"50px",width:"250px", opacity:".7" }}
             type="text"
-            name="weather"
+            name="robot"
             placeholder="enter a funny word ..."
             value= {props.value}
             onChange={props.handleInputChange}
@@ -15,7 +16,7 @@ const SearchBox = props =>(
             className="btn" 
             type="submit" 
             onClick={props.handleFormSubmit}>
-            Get Robot
+            <strong>Get Robot</strong>
             </button>
         </div>
         
