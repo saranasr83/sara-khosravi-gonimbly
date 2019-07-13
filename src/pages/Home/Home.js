@@ -11,27 +11,20 @@ class Home extends Component {
         userInput:"",
         results:""
     }
-
+    //method to handle/track the form input
     handleInputChange = event => {
         this.setState ({userInput: event.target.value})
     };
-
+    //method for submit button
     handleFormSubmit = event => {
         event.preventDefault();
         console.log('calling the API')
-        //this one adds background
-        // axios.get(`https://robohash.org/${this.state.userInput}?bgset=bg1`)
-        //this one just regulat robots
-        // axios.get(`https://robohash.org/${this.state.userInput}?ignoreext=false`)
-        //this one for cats
-        // axios.get(`https://robohash.org/${this.state.userInput}?set=set4`)
-        //this one for funny faces
-        axios.get(`https://robohash.org/${this.state.userInput}?set=set2`)
 
+        // Making the call to external API to get the photos:
+        axios.get(`https://robohash.org/${this.state.userInput}?set=set2`)
             .then(res => {
                 console.log('result',res)
                 this.setState({results:res.config.url})
-
         }) 
         .catch(error => console.log(error));      
     }
