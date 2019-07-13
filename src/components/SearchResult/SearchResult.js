@@ -6,13 +6,6 @@ const SearchResult = props =>(
         <img className="img-fluid"  src={props.results} alt="" />
     </div>
     
-// {/* <ul>
-//     {props.results.map(result => (
-//         <li key={result}>
-//             <img className="img-fluid" alt="dog" src={result} />
-//         </li>
-//     ))}
-// </ul> */}
 )
 
 export default SearchResult;
