@@ -5,7 +5,7 @@ const SearchBox = props =>(
     <form className="search w3-animate-top">
         <div className="form-group">
             <input 
-            style={{height:"50px",width:"250px", opacity:".7" }}
+            style={{height:"50px",width:"250px", opacity:".7", padding:"8px" }}
             type="text"
             name="robot"
             placeholder="enter a funny word ..."

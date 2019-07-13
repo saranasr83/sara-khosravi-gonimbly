@@ -1,7 +1,11 @@
 body {
     background-image: url("./background3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     width: 100%;
-    height: auto;
+    /* height: auto; */
+    min-height: 100vh
    }
 .typewriter {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
