@@ -9,7 +9,8 @@ import SearchResult from "../../components/SearchResult/SearchResult";
 class Home extends Component {
     state ={
         userInput:"",
-        results:""
+        results:"",
+        robotArr:[]
     }
     //method to handle/track the form input
     handleInputChange = event => {
@@ -25,6 +26,9 @@ class Home extends Component {
             .then(res => {
                 console.log('result',res)
                 this.setState({results:res.config.url})
+                this.state.robotArr.push(this.state.results);
+                console.log("robot array:", this.state.robotArr)
+
         }) 
         .catch(error => console.log(error));      
     }
@@ -37,6 +41,7 @@ class Home extends Component {
             .then(res => {
                 console.log('result',res)
                 this.setState({results:res.config.url})
+                this.state.robotArr.push(this.state.results);
         }) 
         .catch(error => console.log(error));      
     }
@@ -56,6 +61,12 @@ class Home extends Component {
                     <SearchResult
                     results={this.state.results}
                     />
+                    <div>
+                    {this.state.robotArr.map(i => 
+                    <img style={{width:"65px",height:"65px", marginRight:"10px"}} 
+                    src={i} alt=""/>)}                       
+                    </div>
+
                 </div>
             </container>
         )

@@ -2,8 +2,8 @@ import React from "react";
 import "./SearchResult.css"
 
 const SearchResult = props =>(
-    <div>
-        <img className="img-fluid"  src={props.results} alt="" />
+    <div className={props.results ? "animate" : ""} {...props}>
+        <img className="img-fluid" style={props.style} src={props.results} alt="" />
     </div>
     
 )
