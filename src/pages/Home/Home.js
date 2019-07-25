@@ -28,6 +28,18 @@ class Home extends Component {
         }) 
         .catch(error => console.log(error));      
     }
+    handlePetFormSubmit = event => {
+        event.preventDefault();
+        console.log('calling the API')
+
+        // Making the call to external API to get the photos:
+        axios.get(`https://robohash.org/${this.state.userInput}?set=set4`)
+            .then(res => {
+                console.log('result',res)
+                this.setState({results:res.config.url})
+        }) 
+        .catch(error => console.log(error));      
+    }
     render(){
         return (
             <container className="container-fluid">
@@ -39,6 +51,7 @@ class Home extends Component {
                     <SearchBox
                     handleInputChange={this.handleInputChange}
                     handleFormSubmit={this.handleFormSubmit}
+                    handlePetFormSubmit={this.handlePetFormSubmit}
                     />
                     <SearchResult
                     results={this.state.results}

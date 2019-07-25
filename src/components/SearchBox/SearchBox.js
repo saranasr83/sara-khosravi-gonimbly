@@ -18,6 +18,12 @@ const SearchBox = props =>(
             onClick={props.handleFormSubmit}>
             <strong>Get Robot</strong>
             </button>
+            <button 
+            className="btn" 
+            type="submit" 
+            onClick={props.handlePetFormSubmit}>
+            <strong>Get Pet Robot</strong>
+            </button>
         </div>
         
     </form>
